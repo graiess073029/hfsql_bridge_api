@@ -12,12 +12,17 @@ import chalk from 'chalk';
 
 dotenv.config()
 
-const origin = parseArray(process.env.ORIGIN as string)
+const originArray = () => {
+    const res = parseArray(process.env.ORIGIN as string)
 
-if (origin instanceof Error) {
+    if (res instanceof Error) {
 
-    console.log(chalk.red("Please write a valid array in the ORIGIN env variable or write a single origin."))
-    process.exit(1);
+        console.log(chalk.red("Please write a valid array in the ORIGIN env variable or write a single origin."))
+        process.exit(1);
+
+    }
+
+    return res
 
 }
 
@@ -31,7 +36,7 @@ export const config: appConfig = {
     },
 
     server: {
-        origin: process.env.ORIGIN?.startsWith("[") ? origin : process.env.ORIGIN as string,
+    origin: process.env.ORIGIN?.startsWith("[") ? originArray() : process.env.ORIGIN as string,
         sslOptions: {
             key: process.env.KEY as string,
             cert: process.env.CERT as string,
@@ -45,3 +50,5 @@ export const config: appConfig = {
 
 
 }
+
+console.log(config.server.serverPort)

@@ -1,4 +1,4 @@
-import { logger2 } from './logs/loggers/logger_part2';
+import { logger2 } from './logs/loggers/logger_part2.js';
 import { logger1 } from './logs/loggers/logger_part1.js';
 import { createServer, Server } from 'http';
 import { errorLogger } from './logs/loggers/errorLogger.js';
@@ -14,7 +14,7 @@ import { existsSync, readFileSync } from 'fs'
 import { createServer as createHttpsServer, Server as HttpsServer } from 'https';
 import { log } from './utils/log.js';
 import { execute_query, } from './routes/execute.js';
-import { dbAvailable } from './middleware/dbAvailable';
+import { dbAvailable } from './middleware/dbAvailable.js';
 import path from 'path';
 
 // Initializing the express application and the server
