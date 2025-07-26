@@ -1,4 +1,4 @@
-import { log } from '../../utils/log';
+import { log } from '../../utils/log.js';
 import { appendFile } from "fs/promises";
 import chalk from "chalk";
 import { NextFunction, RequestHandler } from "express";

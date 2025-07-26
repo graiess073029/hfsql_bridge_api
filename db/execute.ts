@@ -1,6 +1,6 @@
-import { getCnx } from './connect';
-import { SqlResponse } from "../types/types";
-import  {Connection} from 'odbc/lib/odbc';
+import { getCnx } from './connect.js';
+import { SqlResponse } from "../types/types.js";
+import  {Connection} from 'odbc';
 
 
 /**

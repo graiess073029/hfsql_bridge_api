@@ -1,5 +1,5 @@
 import { CustomRequest, HttpResponse } from '../types/types.js';
-import { DB_STATE, reconnect } from './../db/connect';
+import { DB_STATE, reconnect } from './../db/connect.js';
 import { NextFunction } from "express";
 import { CustomResponse } from "../types/types";
 

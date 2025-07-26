@@ -1,6 +1,6 @@
-import { log } from '../utils/log';
-import { SqlResponse } from '../types/types';
-import { config } from './../config/config';
+import { log } from '../utils/log.js';
+import { SqlResponse } from '../types/types.js';
+import { config } from './../config/config.js';
 import odbc, { NodeOdbcError, Pool } from 'odbc'
 
 

@@ -1,6 +1,6 @@
-import { config } from './../config/config';
+import { config } from './../config/config.js';
 import { CustomRequest } from '../types/types.js';
-import { execute } from './../db/execute';
+import { execute } from './../db/execute.js';
 import { NextFunction } from "express"
 import { HttpResponse } from '../types/types.js';
 import { CustomResponse } from '../types/types.js';

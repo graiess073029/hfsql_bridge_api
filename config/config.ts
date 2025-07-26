@@ -1,4 +1,4 @@
-import { parseArray } from './../utils/parseArray';
+import { parseArray } from './../utils/parseArray.js';
 import dotenv from 'dotenv';
 import { appConfig } from "../types/types.js";
 import chalk from 'chalk';
